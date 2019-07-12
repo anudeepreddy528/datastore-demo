@@ -1,0 +1,30 @@
+Hi I have initially created a datastore with customers kind with few attributes 
+like Firstname,lastname,email,custId
+
+Then by using nodejs and express framework created 2 apis  /getCustomers api to fetch results from datastore
+and /getCustomers/id?id=value
+
+use 
+Node should install on local machine 
+>npm init //It creates package.json file
+For dependencies add use 
+>npm i --save module-name(express,body-parser)
+>npm install//to add all dependencies
+>npm start //command to run locally 
+
+I have used app engine standard environment to deploy in app engine for deploying use command
+$gcloud app deploy(google sdk)
+
+before running deploy command
+$gcloud auth login
+$gcloud config set project projectId
+
+welcome endpoint:https://nodejs-customer-243619.appspot.com/
+
+getCustomers endpoint:https://nodejs-customer-243619.appspot.com/getCustomers
+
+sample id:
+
+getCustomers with id:https://nodejs-customer-243619.appspot.com/getCustomer?id=153241
+getCustomers with id:https://nodejs-customer-243619.appspot.com/getCustomer?id=153242
+getCustomers with id:https://nodejs-customer-243619.appspot.com/getCustomer?id=153243
