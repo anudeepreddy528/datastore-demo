@@ -58,7 +58,7 @@ app.post('/postCustomer',(req,res)=>{
         data:req.body
     };
     datastore.save(entity,()=>{
-        console.log(req.body)
+        console.log(req.body);
         res.status(200).json('Data successfully added');
     });
 });
@@ -66,7 +66,7 @@ app.put('/updateCustomer',(req,res)=>{
     var keykind=datastore.key([kind,parseInt(req.body.custId)]);
     datastore.get(keykind,(err,entity)=>{    
     if(err)
-        res.json('Error is:'+err);
+        res.json('Error is:'+err)
     else
         entity.phone=req.body.phone;
         console.log(entity);
