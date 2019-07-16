@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "It's a sample app engine standard environment demo with datastore in which created a rest endpoints to fetch data from datastore.",
   "main": "index.js",
-  "scripts": {
-    "start": "node index"
-  },
   "author": "N.Anudeep Reddy",
   "license": "ISC",
   "dependencies": {

@@ -22,7 +22,7 @@ app.get('/',(req,res)=>{
 //To fetch data from datastore
 app.get('/getCustomers',(req,res)=>{
   //If no input is send all results will be shown
-    var query=datastore.createQuery(kind)
+    var query=datastore.createQuery(kind);
 
     datastore.runQuery(query,(err,data)=>{
     if(err)
@@ -36,7 +36,7 @@ app.get('/getCustomers',(req,res)=>{
 });
 
 app.get('/getCustomer',(req,res)=>{
-    var id=JSON.parse(req.query.id);
+    var id=JSON.parse(req.query.id)
 
     let query = datastore.createQuery(kind).filter('custId','=',id);//filtering based on id
     datastore.runQuery(query,(err,data)=>{
