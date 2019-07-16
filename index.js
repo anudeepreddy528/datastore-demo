@@ -22,7 +22,7 @@ app.get('/',(req,res)=>{
 //To fetch data from datastore
 app.get('/getCustomers',(req,res)=>{
   //If no input is send all results will be shown
-    var query=datastore.createQuery(kind)
+    var query=datastore.createQuery(kind);
 
     datastore.runQuery(query,(err,data)=>{
     if(err)
