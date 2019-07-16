@@ -29,14 +29,14 @@ app.get('/getCustomers',(req,res)=>{
         res.json('Error is:'+err);
 
     if(Object.keys(data).length==0)//If data is empty in datastore
-        res.status(200).json('No data is available')
+        res.status(200).json('No data is available');
     else
         res.status(200).send(data);//all data will be displayed
 });
 });
 
 app.get('/getCustomer',(req,res)=>{
-    var id=JSON.parse(req.query.id)
+    var id=JSON.parse(req.query.id);
 
     let query = datastore.createQuery(kind).filter('custId','=',id);//filtering based on id
     datastore.runQuery(query,(err,data)=>{
