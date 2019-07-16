@@ -22,14 +22,14 @@ app.get('/',(req,res)=>{
 //To fetch data from datastore
 app.get('/getCustomers',(req,res)=>{
   //If no input is send all results will be shown
-    var query=datastore.createQuery(kind);
+    var query=datastore.createQuery(kind)
 
     datastore.runQuery(query,(err,data)=>{
     if(err)
-        res.json('Error is:'+err);
+        res.json('Error is:'+err)
 
     if(Object.keys(data).length==0)//If data is empty in datastore
-        res.status(200).json('No data is available');
+        res.status(200).json('No data is available')
     else
         res.status(200).send(data);//all data will be displayed
 });
