@@ -66,7 +66,7 @@ app.put('/updateCustomer',(req,res)=>{
     var keykind=datastore.key([kind,parseInt(req.body.custId)]);
     datastore.get(keykind,(err,entity)=>{    
     if(err)
-        res.json('Error is:'+err)
+        res.json('Error is:'+err);
     else
         entity.phone=req.body.phone;
         console.log(entity);

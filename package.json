@@ -4,7 +4,6 @@
   "description": "It's a sample app engine standard environment demo with datastore in which created a rest endpoints to fetch data from datastore.",
   "main": "index.js",
   "scripts": {
-    "pretest": "./node_modules/.bin/eslint --ignore-path .gitignore . --fix",
     "start": "node index"
   },
   "author": "N.Anudeep Reddy",
@@ -26,10 +25,11 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run pretest"
+      "pre-commit": "lint-staged"
     }
   },
   "lint-staged": {
-    "*.js": ["./node_modules/.bin/eslint — fix", "git add"]
+    "*.js": ["./node_modules/.bin/eslint", "git add"]
   }
+
 }
