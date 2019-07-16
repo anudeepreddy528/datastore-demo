@@ -26,7 +26,7 @@ app.get('/getCustomers',(req,res)=>{
 
     datastore.runQuery(query,(err,data)=>{
     if(err)
-        res.json('Error is:'+err)
+        res.json('Error is:'+err);
 
     if(Object.keys(data).length==0)//If data is empty in datastore
         res.status(200).json('No data is available')
