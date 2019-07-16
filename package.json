@@ -3,29 +3,26 @@
   "version": "1.0.0",
   "description": "It's a sample app engine standard environment demo with datastore in which created a rest endpoints to fetch data from datastore.",
   "main": "index.js",
-  "author": "N.Anudeep Reddy",
+  "author": "YSP",
   "license": "ISC",
   "dependencies": {
     "@google-cloud/datastore": "^2.0.0",
     "body-parser": "^1.19.0",
-    "express": "^4.17.1"
-  },
-  "devDependencies": {
     "eslint": "^6.0.1",
-    "eslint-config-standard": "^13.0.1",
-    "eslint-plugin-import": "^2.18.0",
-    "eslint-plugin-node": "^9.1.0",
-    "eslint-plugin-promise": "^4.2.1",
-    "eslint-plugin-standard": "^4.0.0",
+    "express": "^4.17.1",
     "husky": "^3.0.0",
-    "lint-staged": "^9.2.0"
+    "jest": "^24.8.0",
+    "lint-staged": "^9.2.0",
+    "stylelint": "^10.1.0"
   },
+ 
   "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+      "hooks": {
+        "pre-commit": "lint-staged",
+        "test": "jest --bail â€”-findRelatedTests"
+      }
+    },
+    "lint-staged": {
+      "*.js": ["./node_modules/.bin/eslint --ignore-path .gitignore --fix", "git add"]
     }
-  },
-  "lint-staged": {
-    "*.js": ["./node_modules/.bin/eslint --ignore-path .gitignore --fix", "git add"]
-  }
 }
