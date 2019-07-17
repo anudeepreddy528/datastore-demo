@@ -4,6 +4,6 @@ steps:
 - name: 'gcr.io/cloud-builders/npm'
   args: [install]
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['build','-t','gcr.io/mcc-ai-poc/my-image:$REVISION_ID .']
+  args: ['build','-t','gcr.io/mcc-ai-poc/images:$REVISION_ID .']
 - name: 'gcr.io/cloud-builders/docker'
-  args: ['push','gcr.io/mcc-ai-poc/my-image']
+  args: ['push','gcr.io/mcc-ai-poc/images']
