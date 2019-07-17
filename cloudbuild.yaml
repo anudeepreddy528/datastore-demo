@@ -6,4 +6,4 @@ steps:
 -name: 'gcr.io/cloud-builders/docker'
  args: ['build','-t','gcr.io/$PROJECT_ID/$_NODE_ENV:$REVISION_ID .']
 -name: 'gcr.io/cloud-builders/docker'
- args: ['push','gcr.io/$PROJECT_ID/$NODE_ENV:$REVISION_ID']
+ args: ['push','gcr.io/$PROJECT_ID/$_NODE_ENV:$REVISION_ID']
