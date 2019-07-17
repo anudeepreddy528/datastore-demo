@@ -6,7 +6,8 @@
   "author": "Anudeep",
   "license": "ISC",
   "scripts": {
-    "start": "node index"
+    "start": "node index",
+    "test": " "
   },
   "dependencies": {
     "@google-cloud/datastore": "^2.0.0",
@@ -19,7 +20,7 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged"
-     }
+    }
   },
   "lint-staged": {
     "*.js": [
