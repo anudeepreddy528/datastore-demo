@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "It's a sample app engine standard environment demo with datastore in which created a rest endpoints to fetch data from datastore.",
   "main": "index.js",
-  "author": "YSP",
+  "author": "Anudeep",
   "license": "ISC",
   "dependencies": {
     "@google-cloud/datastore": "^2.0.0",
