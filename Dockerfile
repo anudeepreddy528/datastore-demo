@@ -1,6 +1,10 @@
-FROM node:8
+FROM node:8-alpine
 
-WORKDIR /usr/src/app
+WORKDIR /home/ypahilwan/app
+
+COPY package*.json /home/ypahilwan/app/
+
+COPY . /home/ypahilwan/app
 
 EXPOSE 3000
 
