@@ -6,9 +6,8 @@
   "author": "Anudeep",
   "license": "ISC",
   "scripts": {
-    "start": "node index",
-    "test": " "
-  },
+    "start": "node index"  
+    },
   "dependencies": {
     "@google-cloud/datastore": "^2.0.0",
     "body-parser": "^1.19.0",
